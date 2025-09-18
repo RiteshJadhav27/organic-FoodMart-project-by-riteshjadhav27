@@ -1,0 +1,28 @@
+/* Global styles */
+body {
+    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Product styling */
+  .card {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .card img {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  /* Cart styling */
+  .card-body {
+    text-align: center;
+  }
+  
+  button {
+    width: 100%;
+    font-weight: bold;
+  }
+  

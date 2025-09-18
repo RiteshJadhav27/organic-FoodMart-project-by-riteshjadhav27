@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+
+  <!-- Bootstrap CDN -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/vendor.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h2, h3 {
+      color: #333;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    textarea {
+      resize: none;
+    }
+
+    button[type="submit"] {
+      background-color: #007bff;
+      border: none;
+      color: white;
+      font-size: 16px;
+      padding: 12px;
+      transition: all 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #0056b3;
+      cursor: pointer;
+    }
+
+    .image-container {
+      margin-top: 30px;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .image-container img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 767px) {
+      .image-container img {
+        height: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container-fluid">
+      <div class="row py-3 border-bottom">
+        
+        <div class="col-sm-4 col-lg-2 text-center text-sm-start d-flex gap-3 justify-content-center justify-content-md-start">
+          <div class="d-flex align-items-center my-3 my-sm-0">
+            <a href="index.html">
+              <img src="assets/images/logo.svg" alt="logo" class="img-fluid">
+            </a>
+          </div>
+          <!-- <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar">
+            <svg width="24" height="24" viewBox="0 0 24 24"><use xlink:href="#menu"></use></svg>
+          </button> -->
+        </div>
+        
+        <div class="col-sm-6 offset-sm-2 offset-md-0 col-lg-4">
+          <div class="search-bar row bg-light p-2 rounded-4">
+            <div class="col-md-4 d-none d-md-block">
+              <select class="form-select border-0 bg-transparent">
+                <option>All Categories</option>
+                <option>Groceries</option>
+                <option>Drinks</option>
+                <option>Chocolates</option>
+              </select>
+            </div>
+            <div class="col-11 col-md-7">
+              <form id="search-form" class="text-center" action="index.html" method="post">
+                <input type="text" class="form-control border-0 bg-transparent" placeholder="Search for more than 20,000 products">
+              </form>
+            </div>
+            <div class="col-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M21.71 20.29L18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a1 1 0 0 0 1.42 0a1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 7-7a7 7 0 0 1-7 7Z"/></svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <ul class="navbar-nav list-unstyled d-flex flex-row gap-3 gap-lg-5 justify-content-center flex-wrap align-items-center mb-0 fw-bold text-uppercase text-dark">
+            <li class="nav-item active">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle pe-3" role="button" id="pages" data-bs-toggle="dropdown" aria-expanded="false">Menu</a>
+              <ul class="dropdown-menu border-0 p-3 rounded-0 shadow" aria-labelledby="pages">
+                <li><a href="about.html" class="dropdown-item">About Us </a></li>
+                <li><a href="/Backend/cart.html" class="dropdown-item">Cart </a></li>
+                <li><a href="index.html" class="dropdown-item">Contact </a></li>
+                <li><a href="index.html" class="dropdown-item">My Account </a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-sm-8 col-lg-2 d-flex gap-5 align-items-center justify-content-center justify-content-sm-end">
+          <ul class="d-flex justify-content-end list-unstyled m-0">
+              <!-- Account Icon with Dropdown (Specific Class) -->
+              <li class="dropdown1">
+                <a href="signin.html" class="p-2 mx-1">
+                    <svg width="24" height="24"><use xlink:href="#user"></use></svg> 
+                </a>
+            </li>
+            
+            <li class="cart-icon">
+              <a href="/Backend/cart.html" class="p-2 mx-1">
+                  <svg width="24" height="24"><use xlink:href="#shopping-bag"></use></svg>
+                  <!-- <span id="cart-item-count" class="badge bg-primary position-absolute top-0 start-100 translate-middle badge-rounded-pill">0</span> -->
+              </a>
+          </li>
+          
+          </ul>
+      </div>
+      
+      <!-- Optional: Add the SVG icons -->
+      <svg style="display: none;">
+          <symbol id="user" viewBox="0 0 24 24">
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.66 0-8 1.34-8 4v2h16v-2c0-2.66-5.34-4-8-4z"></path>
+          </symbol>
+          <symbol id="wishlist" viewBox="0 0 24 24">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+          </symbol>
+          <symbol id="shopping-bag" viewBox="0 0 24 24">
+              <path d="M17 4h-1V2c0-.55-.45-1-1-1h-6c-.55 0-1 .45-1 1v2H7c-1.1 0-1.99.9-1.99 2L5 19c0 1.1.89 2 1.99 2H17c1.1 0 1.99-.9 1.99-2L19 6c0-1.1-.89-2-1.99-2zm-6-2h4v2h-4V2zm5 17H8v-9h8v9z"></path>
+          </symbol>
+      </svg>
+      
+      <!-- Optional: Add Bootstrap's Offcanvas for Cart -->
+      <!-- <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasCartLabel">
+          <div class="offcanvas-header">
+              <h5 id="offcanvasCartLabel">Shopping Cart</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body"> -->
+              <!-- Cart content goes here -->
+             <!--  Your shopping cart is empty.
+          </div>
+      </div> -->
+
+ 
+
+
+      
+      <!-- Optional: Add Bootstrap's JavaScript if you're using Bootstrap 5 for the offcanvas -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+      </div>
+    </div>
+  </header>
+
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-md-6">
+        <h2 class="display-4">Contact Us</h2>
+        <p class="lead">We'd love to hear from you! Please reach out to us using the form below.</p>
+
+        <form>
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea class="form-control" id="message" rows="4" placeholder="Your message here..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg btn-block">Send Message</button>
+        </form>
+      </div>
+
+      <div class="col-md-6">
+        <h3 class="display-5"></h3>
+        <p class="lead">Want to Know More About Us Then Contact Us 😊</p>
+
+        <div class="image-container">
+          <!-- Replace with your actual image URL -->
+          <img src="images/contact.png" alt="Our Location Image">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="py-5">
+    <div class="container-lg">
+      <div class="row">
+
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="footer-menu">
+            <img src="images/logo.svg" width="240" height="70" alt="logo">
+            <div class="social-links mt-3">
+              <ul class="d-flex list-unstyled gap-2">
+                <li>
+                  <a href="#" class="btn btn-outline-light">
+                    <svg width="16" height="16"><use xlink:href="#facebook"></use></svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="btn btn-outline-light">
+                    <svg width="16" height="16"><use xlink:href="#twitter"></use></svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="btn btn-outline-light">
+                    <svg width="16" height="16"><use xlink:href="#youtube"></use></svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="btn btn-outline-light">
+                    <svg width="16" height="16"><use xlink:href="#instagram"></use></svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="btn btn-outline-light">
+                    <svg width="16" height="16"><use xlink:href="#amazon"></use></svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-2 col-sm-6">
+          <div class="footer-menu">
+            <h5 class="widget-title">Organic</h5>
+            <ul class="menu-list list-unstyled">
+              <li class="menu-item">
+                <a href="#" class="nav-link">About us</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">Conditions </a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">Our Journals</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">Careers</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">Affiliate Programme</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">Ultras Press</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-6">
+          <div class="footer-menu">
+            <h5 class="widget-title">Quick Links</h5>
+            <ul class="menu-list list-unstyled">
+              <li class="menu-item">
+                <a href="#" class="nav-link">Offers</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">Discount Coupons</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">Stores</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">Track Order</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">Shop</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">Info</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-6">
+          <div class="footer-menu">
+            <h5 class="widget-title">Customer Service</h5>
+            <ul class="menu-list list-unstyled">
+              <li class="menu-item">
+                <a href="#" class="nav-link">FAQ</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">Contact</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">Privacy Policy</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">Returns & Refunds</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">Cookie Guidelines</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="nav-link">Delivery Information</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="footer-menu">
+            <h5 class="widget-title">Subscribe Us</h5>
+            <p>Subscribe to our newsletter to get updates about our grand offers.</p>
+            <form class="d-flex mt-3 gap-0" action="index.html">
+              <input class="form-control rounded-start rounded-0 bg-light" type="email" placeholder="Email Address" aria-label="Email Address">
+              <button class="btn btn-dark rounded-end rounded-0" type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </footer>
+
+  <div id="footer-bottom">
+    <div class="container-lg">
+      <div class="row">
+        <div class="col-md-6 copyright">
+          <p></p>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+  <!-- Bootstrap JS and Popper.js -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
